@@ -44,7 +44,7 @@ func DropTable(db *gorm.DB) error {
 	return nil
 }
 
-func CreatRow(db *gorm.DB) {
+func CreateRow(db *gorm.DB) {
 	counter++
 
 	userExample := tables.User{Name: fmt.Sprintf("Test %d", counter), AccountCreated: time.Now()}
