@@ -62,9 +62,10 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 						m.Message = successStyle.Render("Row created")
 						m.LoadTableData()
 					case "Delete last row":
+						m.DB.Model(tables.User{}).Count(&usersAmount)
 						if usersAmount > 0 {
 							db.DeleteLastRow(m.DB)
-							m.Message = successStyle.Render("Row created")
+							m.Message = successStyle.Render("Row Deleted")
 							m.DB.Model(tables.User{}).Count(&usersAmount)
 						}
 						if usersAmount == 0 {
