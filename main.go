@@ -107,7 +107,7 @@ func CreateListModel() list.Model {
 func CreateTableModel(columns []table.Column) table.Model {
 	return table.New(
 		table.WithColumns(columns),
-		table.WithHeight(7),
+		table.WithHeight(10),
 		table.WithFocused(true),
 	)
 }

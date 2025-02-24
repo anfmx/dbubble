@@ -34,7 +34,7 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	switch msg := msg.(type) {
 	case tea.KeyMsg:
 		switch msg.String() {
-		case "ctrl+c", "й":
+		case tea.KeyCtrlC.String():
 			return m, tea.Quit
 		case "enter":
 			if m.CurrentPage == IntroPage {
@@ -115,7 +115,7 @@ func (m *Model) LoadTableData() {
 	res := m.DB.Find(&users)
 
 	if res.Error != nil {
-		m.Message = errorStyle.Render("Error fethcing data")
+		m.Message = errorStyle.Render("Error fetching data")
 		return
 	}
 	if len(users) == 0 {
@@ -129,20 +129,19 @@ func (m *Model) LoadTableData() {
 		return
 	}
 
-	var rows []table.Row
-	for _, user := range users {
-		rows = append(rows, table.Row{
+	rows := make([]table.Row, len(users))
+	for i, user := range users {
+		rows[i] = table.Row{
 			strconv.Itoa(int(user.ID)),
 			user.Name,
-			user.AccountCreated.Format("2011-01-01 11:00")},
-		)
+			user.AccountCreated.Format("2006-01-02 15:04")}
 	}
 
 	m.Table = table.New(
 		table.WithColumns(columnNames),
 		table.WithRows(rows),
 		table.WithFocused(true),
-		table.WithHeight(7),
+		table.WithHeight(10),
 	)
 	s := table.DefaultStyles()
 	s.Header = s.Header.BorderStyle(lipgloss.NormalBorder()).
@@ -167,6 +166,6 @@ func (m Model) View() string {
 	case TablePage:
 		return docStyle.Render(m.Table.View() + "\nPress [backspace] to return")
 	default:
-		return errorStyle.Render("Page does not exist")
+		return ""
 	}
 }
