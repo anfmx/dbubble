@@ -3,11 +3,11 @@ package ui
 import (
 	"strconv"
 
+	"github.com/Anfmx/dbubble/db"
+	"github.com/Anfmx/dbubble/tables"
 	"github.com/charmbracelet/bubbles/table"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
-	"github.com/username/tui-db-manager/db"
-	"github.com/username/tui-db-manager/tables"
 )
 
 type item struct {

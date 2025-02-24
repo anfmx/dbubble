@@ -1,4 +1,4 @@
-module github.com/username/tui-db-manager
+module github.com/Anfmx/dbubble
 
 go 1.23.4
 

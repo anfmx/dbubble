@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/Anfmx/dbubble/tables"
 	"github.com/charmbracelet/bubbles/table"
 	"github.com/joho/godotenv"
-	"github.com/username/tui-db-manager/tables"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
