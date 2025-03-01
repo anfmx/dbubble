@@ -6,7 +6,6 @@ import (
 
 	"github.com/Anfmx/dbubble/tables"
 	"github.com/charmbracelet/bubbles/table"
-	"github.com/joho/godotenv"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
@@ -14,11 +13,6 @@ import (
 var counter int
 
 func ConnectDB(port, username, password string) (*gorm.DB, error) {
-	err := godotenv.Load("./.env")
-	if err != nil {
-		fmt.Println("Loading env file error:", err)
-	}
-
 	dsn := fmt.Sprintf("host=localhost user=%s password=%s dbname=testdb port=%s sslmode=disable", username, password, port)
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
