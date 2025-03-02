@@ -40,8 +40,8 @@
 ## Installation
 1. Clone the repository:
 ```
-git clone https://github.com/anfmx/DBubble.git
-cd DBubble
+git clone https://github.com/anfmx/dbubble.git
+cd dbubble
 ```
 2. Install dependencies:
 ```
