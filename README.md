@@ -1,9 +1,14 @@
-<p align="center" style="font-size: 24px; bold">TUI Application for Database Management</p>
+<div align="center">
 
----
+# **TUI Application for Database Management**
 
-<p align="center" style="font-size: 20px; bold">🚧🛠️ Project is under development! 🛠️🚧</p>
+</div>
 
+<div align="center">
+
+### 🚧🛠️ **Project is under development!** 🛠️🚧
+
+</div>
 
 ![DBubble Demo](dbubble.gif)
 
