@@ -3,8 +3,8 @@ package ui
 import (
 	"strconv"
 
-	"github.com/Anfmx/dbubble/db"
-	"github.com/Anfmx/dbubble/tables"
+	"github.com/anfmx/dbubble/db"
+	"github.com/anfmx/dbubble/tables"
 	"github.com/charmbracelet/bubbles/table"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"

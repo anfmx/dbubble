@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/Anfmx/dbubble/tables"
+	"github.com/anfmx/dbubble/tables"
 	"github.com/charmbracelet/bubbles/table"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"

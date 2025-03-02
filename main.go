@@ -6,8 +6,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/Anfmx/dbubble/db"
-	"github.com/Anfmx/dbubble/ui"
+	"github.com/anfmx/dbubble/db"
+	"github.com/anfmx/dbubble/ui"
 	"github.com/charmbracelet/bubbles/list"
 	"github.com/charmbracelet/bubbles/table"
 	tea "github.com/charmbracelet/bubbletea"
