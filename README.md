@@ -1,8 +1,8 @@
-<p align="center" style="font-size: 32px; bold">TUI Application for Database Management</p>
+### <p align="center" style="font-size: 32px; bold">TUI Application for Database Management</p>
 
 ---
 
-<p align="center" style="font-size: 28px; bold">🚧🛠️ Project is under development! 🛠️🚧</p>
+### <p align="center" style="font-size: 28px; bold">🚧🛠️ Project is under development! 🛠️🚧</p>
 
 
 ![DBubble Demo](dbubble.gif)
